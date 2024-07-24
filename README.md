@@ -1,2 +1,2 @@
 # react
-A portfolio example of a React application
+A demo React application
