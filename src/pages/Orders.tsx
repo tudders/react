@@ -25,7 +25,7 @@ const Orders = () => {
     const postData = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_DOMAIN}/api/${fingerprint}/orders`,
+          `${process.env.REACT_APP_API_DOMAIN}api/${fingerprint}/orders`,
           {
             method: 'POST',
             headers: {
@@ -67,7 +67,7 @@ const Orders = () => {
     const deleteRecord = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_DOMAIN}/api/${fingerprint}/order/${orderId}`,
+          `${process.env.REACT_APP_API_DOMAIN}api/${fingerprint}/order/${orderId}`,
           {
             method: 'DELETE',
           },
@@ -105,7 +105,7 @@ const Orders = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_DOMAIN}/api/${fingerprint}/orders`,
+          `${process.env.REACT_APP_API_DOMAIN}api/${fingerprint}/orders`,
           {
             method: 'GET',
           },
