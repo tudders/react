@@ -10,7 +10,6 @@ const Orders = () => {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
   const [error, setError] = useState<String | null>(null);
-  const [apiResponse, setApiResponse] = useState<String | null>(null);
 
   const fingerprint = useStore(state => state.fingerprint);
 
@@ -103,6 +102,7 @@ const Orders = () => {
 
   useEffect(() => {
     const fetchDataForPosts = async () => {
+      setLoading(true);
       try {
         const response = await fetch(
           `${process.env.REACT_APP_API_DOMAIN}/api/${fingerprint}/orders`,
@@ -120,11 +120,13 @@ const Orders = () => {
         if (err instanceof Error) {
           setError(err.message);
         }
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchDataForPosts();
-  }, []);
+  });
 
   return (
     <div>

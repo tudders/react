@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 
 //routes
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
@@ -38,7 +37,6 @@ declare global {
 
 function App() {
   const location = useLocation();
-  const loggedIn = useStore(state => state.loggedIn);
 
   useEffect(() => {
     window.HSStaticMethods.autoInit();
