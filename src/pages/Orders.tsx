@@ -101,7 +101,7 @@ const Orders = () => {
   };
 
   useEffect(() => {
-    const fetchDataForPosts = async () => {
+    const fetchData = async () => {
       setLoading(true);
       try {
         const response = await fetch(
@@ -125,8 +125,8 @@ const Orders = () => {
       }
     };
 
-    fetchDataForPosts();
-  });
+    fetchData();
+  }, [fingerprint]);
 
   return (
     <div>
