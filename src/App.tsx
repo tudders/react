@@ -1,25 +1,66 @@
 import React from 'react';
 import logo from './logo.svg';
+
+//routes
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Blogs from './pages/Blogs';
+import Orders from './pages/Orders';
+import Login from './pages/Login';
+import NoPage from './pages/NoPage';
+
+//preline
+import { useEffect } from 'react';
+import 'preline/preline';
+import { IStaticMethods } from 'preline/preline';
+
+//css
 import './App.css';
 
+//store
+import useStore from './store';
+
+export const ProtectedRoute = ({ children }: any) => {
+  const isAuthenticated = useStore(state => state.loggedIn);
+  if (isAuthenticated) {
+    return children;
+  }
+
+  return <Navigate to="/login" />;
+};
+
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods;
+  }
+}
+
 function App() {
+  const location = useLocation();
+  const loggedIn = useStore(state => state.loggedIn);
+
+  useEffect(() => {
+    window.HSStaticMethods.autoInit();
+  }, [location.pathname]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit thios!!! <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route
+          path="orders"
+          element={
+            <ProtectedRoute>
+              <Orders />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={<NoPage />} />
+      </Route>
+    </Routes>
   );
 }
 
