@@ -1,6 +1,6 @@
 import { Outlet, Link } from 'react-router-dom';
 
-import DarkToggleButton from '../layouts/darkModeToggle';
+import DarkToggleButton from '../layout/darkModeToggle';
 
 import useStore from '../store';
 
@@ -21,16 +21,8 @@ const Layout = () => {
               className="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
               aria-label="Brand"
             >
-              Simplis - a simple React demo
+              Simplis - a React demo
             </Link>
-            {loggedIn && (
-              <div
-                className="h-5 cursor-pointer text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-                onClick={logout}
-              >
-                LOG OUT!!!
-              </div>
-            )}
             <div className="sm:hidden">
               <button
                 type="button"
@@ -85,14 +77,14 @@ const Layout = () => {
               <DarkToggleButton />
               <Link
                 to="/"
-                className="font-medium text-blue-500 focus:outline-none"
+                className="mx-2 font-semibold text-gray-600 hover:shadow-xl hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
               >
                 Home
               </Link>
               {!loggedIn && (
                 <Link
                   to="/login"
-                  className="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  className="mx-2 font-semibold text-gray-600 hover:shadow-xl hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
                 >
                   Login
                 </Link>
@@ -100,23 +92,39 @@ const Layout = () => {
               {loggedIn && (
                 <Link
                   to="/orders"
-                  className="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  className="mx-2 font-semibold text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
                 >
                   Orders
                 </Link>
               )}
-              <Link
-                to="/blogs"
-                className="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-              >
-                Blogs
-              </Link>
-              <Link
-                to="/contact"
-                className="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-              >
-                Contact
-              </Link>
+              {loggedIn && (
+                <Link
+                  to="/orders"
+                  className="mx-2 font-semibold text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                >
+                  About
+                </Link>
+              )}
+              {loggedIn && (
+                <div
+                  className="mx-2 font-medium fill-gray-600 hover:fill-gray-400 focus:outline-none focus:fill-gray-400 dark:fill-neutral-400 dark:hover:fill-neutral-500 dark:focus:fill-neutral-500"
+                  onClick={logout}
+                  title="Logout"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{
+                      width: '1em',
+                      height: '1em',
+                      verticalAlign: 'middle',
+                      overflow: 'hidden',
+                    }}
+                    viewBox="0 0 448 512"
+                  >
+                    <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                  </svg>
+                </div>
+              )}
             </div>
           </div>
         </nav>

@@ -2,7 +2,7 @@ import React from 'react';
 
 //routes
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import Layout from './pages/Layout';
+import Layout from './layout/Layout';
 import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Orders from './pages/Orders';
