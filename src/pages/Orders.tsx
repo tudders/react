@@ -5,8 +5,6 @@ import { v4 as uuid } from 'uuid';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { json } from 'stream/consumers';
-import { title } from 'process';
 
 const Orders = () => {
   const [data, setData] = useState<any[]>([]);

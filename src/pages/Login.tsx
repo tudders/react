@@ -1,7 +1,6 @@
 import useStore from '../store';
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import { json } from 'stream/consumers';
 
 interface SignUpFormState {
   username: string;
