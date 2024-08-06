@@ -4,7 +4,7 @@ import React from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
-import Blogs from './pages/Blogs';
+import About from './pages/About';
 import Orders from './pages/Orders';
 import Login from './pages/Login';
 import NoPage from './pages/NoPage';
@@ -46,7 +46,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="blogs" element={<Blogs />} />
+        <Route path="about" element={<About />} />
         <Route
           path="orders"
           element={

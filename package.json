@@ -11,6 +11,7 @@
     "@types/node": "^16.18.104",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "framer-motion": "^11.3.21",
     "get-browser-fingerprint": "^3.2.0",
     "preline": "^2.4.1",
     "react": "^18.3.1",

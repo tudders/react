@@ -21,7 +21,7 @@ const Layout = () => {
               className="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
               aria-label="Brand"
             >
-              Simplis - a React demo
+              Simplis - a React-Spring Boot demo
             </Link>
             <div className="sm:hidden">
               <button
@@ -77,14 +77,14 @@ const Layout = () => {
               <DarkToggleButton />
               <Link
                 to="/"
-                className="mx-2 font-semibold text-gray-600 hover:shadow-xl hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
               >
                 Home
               </Link>
               {!loggedIn && (
                 <Link
                   to="/login"
-                  className="mx-2 font-semibold text-gray-600 hover:shadow-xl hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
                 >
                   Login
                 </Link>
@@ -92,22 +92,22 @@ const Layout = () => {
               {loggedIn && (
                 <Link
                   to="/orders"
-                  className="mx-2 font-semibold text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
                 >
                   Orders
                 </Link>
               )}
-              {loggedIn && (
-                <Link
-                  to="/orders"
-                  className="mx-2 font-semibold text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-                >
-                  About
-                </Link>
-              )}
+
+              <Link
+                to="/about"
+                className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              >
+                About
+              </Link>
+
               {loggedIn && (
                 <div
-                  className="mx-2 font-medium fill-gray-600 hover:fill-gray-400 focus:outline-none focus:fill-gray-400 dark:fill-neutral-400 dark:hover:fill-neutral-500 dark:focus:fill-neutral-500"
+                  className="mx-2 font-medium fill-gray-600  hover:fill-gray-400 focus:outline-none focus:fill-gray-400 dark:fill-neutral-400 dark:hover:fill-neutral-500 dark:focus:fill-neutral-500"
                   onClick={logout}
                   title="Logout"
                 >
