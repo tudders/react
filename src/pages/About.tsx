@@ -1,5 +1,5 @@
 const skills = {
-  front: ['Vue', 'React'],
+  front: ['Vue', 'React', 'Javascript', 'Typescript', 'SCSS'],
   back: ['Node', 'PHP', 'Springboot'],
   infra: ['Cloudflare', 'Azure', 'GCP'],
   storage: ['MySQL', 'Postgres', 'SQLServer', 'Redis'],
