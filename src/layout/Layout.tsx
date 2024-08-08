@@ -1,6 +1,6 @@
 import { Outlet, Link } from 'react-router-dom';
 
-import DarkToggleButton from '../layout/darkModeToggle';
+import DarkToggleButton from './DarkModeToggle';
 
 import useStore from '../store';
 
@@ -77,14 +77,14 @@ const Layout = () => {
               <DarkToggleButton />
               <Link
                 to="/"
-                className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  focus:outline-none focus:text-gray-400 dark:text-neutral-400  dark:focus:text-neutral-500"
               >
                 Home
               </Link>
               {!loggedIn && (
                 <Link
                   to="/login"
-                  className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  focus:outline-none focus:text-gray-400 dark:text-neutral-400  dark:focus:text-neutral-500"
                 >
                   Login
                 </Link>
@@ -92,7 +92,7 @@ const Layout = () => {
               {loggedIn && (
                 <Link
                   to="/orders"
-                  className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  focus:outline-none focus:text-gray-600 dark:text-neutral-400  dark:focus:text-neutral-500"
                 >
                   Orders
                 </Link>
@@ -100,7 +100,7 @@ const Layout = () => {
 
               <Link
                 to="/about"
-                className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                className="after:block after:content-[''] after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center mx-2 font-semibold text-gray-600  focus:outline-none focus:text-gray-600 dark:text-neutral-400  dark:focus:text-neutral-500"
               >
                 About
               </Link>
@@ -129,8 +129,8 @@ const Layout = () => {
           </div>
         </nav>
       </header>
-      <div className="bg-white flex flex-col min-h-[calc(100vh-60px)] py-3 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-500">
-        <div className="w-full md:w-3/5 lg:w-1/2 container mx-auto bg-white py-3 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-500">
+      <div className="bg-white flex flex-col min-h-[calc(100vh-60px)] py-3 dark:bg-neutral-800 dark:text-neutral-400 ">
+        <div className="w-full md:w-3/5 lg:w-1/2 container mx-auto bg-white py-3 dark:bg-neutral-800 dark:text-neutral-400 ">
           <Outlet />
         </div>
       </div>

@@ -30,15 +30,25 @@ function OrdersPageAlert() {
             id="hs-discovery-label"
             className="text-gray-800 font-semibold dark:text-white"
           >
-            The purpose of this page is to work with nested data and components.
+            The purpose of this page is to show basic CRUD operations on
+            hierarchical data
           </h3>
-          <p className="mt-2 text-sm text-gray-700 dark:text-neutral-400">
-            This page is to simulate hierarchical data which could be seen in
-            orders, blog posts, invertory data, etc. It is fully interactive and
+          <p className="mt-2 text-sm text-gray-600 dark:text-neutral-500">
+            This holds CRUD operations using a Spring Boot REST API backend and
+            hierarchical React components. This can typically be seen in orders,
+            blog posts, invertory data, etc. It is fully interactive and
             responsive.
           </p>
-          <p className="mt-2 text-sm text-gray-700 dark:text-neutral-400">
-            Go ahead and create an record using the new record button.
+          <p className="mt-2 text-sm text-gray-600 dark:text-neutral-500">
+            View the <strong>React</strong> and <strong>SpringBoot</strong> code
+            on Github{' '}
+            <a href="https://github.com/tudders" target="_blank">
+              (link)
+            </a>
+          </p>
+          <p className="mt-2 text-sm text-gray-600 dark:text-neutral-500">
+            Go ahead and create a record using the{' '}
+            <span className="underline">add record button</span>.
           </p>
         </div>
       </div>
