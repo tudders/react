@@ -1,40 +1,7 @@
-# Welcome to Remix!
+# Welcome to a React and Spring Boot demo!
 
-- 📖 [Remix docs](https://remix.run/docs)
+This is the MVP of my personal website. As such it's likely to undergo revisions. Check the commit log to see what work has been done.
 
-## Development
+Feel free to fork. Some functionality on the 'Order' page is dependant on the Spring Boot demo repo. This repo can be found [here](https://github.com/tudders/springboot_demo).
 
-Run the dev server:
 
-```shellscript
-npm run dev
-```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
