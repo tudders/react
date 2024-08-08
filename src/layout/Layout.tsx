@@ -1,6 +1,6 @@
 import { Outlet, Link } from 'react-router-dom';
 
-import DarkToggleButton from './DarkModeToggle';
+import DarkToggleButton from '../layout/DarkModeToggle';
 
 import useStore from '../store';
 
