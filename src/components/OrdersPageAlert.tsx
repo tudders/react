@@ -41,8 +41,12 @@ function OrdersPageAlert() {
           </p>
           <p className="mt-2 text-sm text-gray-600 dark:text-neutral-500">
             View the <strong>React</strong> and <strong>SpringBoot</strong> code
-            on Github{' '}
-            <a href="https://github.com/tudders" target="_blank">
+            on Github
+            <a
+              href="https://github.com/tudders"
+              target="_blank"
+              rel="noreferrer"
+            >
               (link)
             </a>
           </p>
