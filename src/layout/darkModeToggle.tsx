@@ -1,21 +1,19 @@
 import { useState } from 'react';
 
-
 function DarkToggleButton() {
+  const [dark, setDark] = useState(false);
 
-    const [dark, setDark] = useState(false);
+  const darkModeHandler = () => {
+    setDark(!dark);
+    document.body.classList.toggle('dark');
+  };
 
-    const darkModeHandler = () => {
-        setDark(!dark);
-        document.body.classList.toggle("dark");
-    }
-    
-
-      return <div>
+  return (
+    <div>
       <button
         className="hs-dark-mode-active:hidden block hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
         type="button"
-        onClick={()=> darkModeHandler()}
+        onClick={() => darkModeHandler()}
       >
         <span className="group inline-flex shrink-0 justify-center items-center size-9">
           <svg
@@ -36,7 +34,7 @@ function DarkToggleButton() {
       </button>
       <button
         className="hs-dark-mode-active:block hidden hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-        onClick={()=> darkModeHandler()}
+        onClick={() => darkModeHandler()}
         type="button"
       >
         <span className="group inline-flex shrink-0 justify-center items-center size-9">
@@ -52,11 +50,7 @@ function DarkToggleButton() {
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle
-              cx="12"
-              cy="12"
-              r="4"
-            />
+            <circle cx="12" cy="12" r="4" />
             <path d="M12 2v2" />
             <path d="M12 20v2" />
             <path d="m4.93 4.93 1.41 1.41" />
@@ -68,9 +62,8 @@ function DarkToggleButton() {
           </svg>
         </span>
       </button>
-    </div> 
-  
- 
-  }
+    </div>
+  );
+}
 
-  export default DarkToggleButton;
+export default DarkToggleButton;
