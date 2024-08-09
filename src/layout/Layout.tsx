@@ -18,10 +18,12 @@ const Layout = () => {
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              className="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
+              className="flex-none  font-semibold dark:text-white focus:outline-none focus:opacity-80"
               aria-label="Brand"
             >
-              Simplis - a React-Spring Boot demo
+              <span className="text-xs xs:text-xl sm:text-xl">
+                Simplis - a React-Spring Boot demo
+              </span>
             </Link>
             <div className="sm:hidden">
               <button

@@ -47,7 +47,7 @@ const Home = () => {
               exit={{ opacity: 0 }}
             >
               <h1
-                className="text-9xl pt-32 p-2 font-semibold 
+                className="text-6xl xs:text-9xl pt-32 p-2 font-semibold 
             bg-gradient-to-r bg-clip-text  text-transparent 
             from-indigo-500 via-purple-500 to-indigo-500
             animate-text tracking-tight"

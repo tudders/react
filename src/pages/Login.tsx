@@ -63,7 +63,7 @@ const Login = () => {
   return (
     <div>
       {!loggedIn && (
-        <div className="mx-auto w-96 mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-700">
+        <div className=" mx-1 xs:mx-auto w-[calc(100%-10px)] sm:w-96 mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-700">
           <div className="p-4 sm:p-7">
             <div className="text-center">
               <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
@@ -73,7 +73,7 @@ const Login = () => {
                 Login using the demo login - <strong>demo, demo</strong>
               </p>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 max-w-full">
               {/* PLACE HOLDER FOR GOOGLE SOCIAL AUTHENTICATION 
               <button
               className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
@@ -220,7 +220,7 @@ const Login = () => {
         </div>
       )}
       {loggedIn && (
-        <div>
+        <div className="m-1">
           <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
             You're logged in!
           </h1>
@@ -228,7 +228,7 @@ const Login = () => {
         </div>
       )}
       {warning && (
-        <div className="mt-3 w-96 mx-auto">
+        <div className="mt-3 m-1 w-96 mx-auto">
           <div
             className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-5"
             role="alert"

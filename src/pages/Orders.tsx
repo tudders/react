@@ -391,7 +391,7 @@ const Orders = () => {
                 <div>
                   <div className="p-4 md:p-5">
                     <div className="flex justify-between items-center">
-                      <span className="flex">
+                      <span className="xs:flex">
                         <h3 className="text-lg font-bold text-gray-800 dark:text-neutral-200">
                           {titleEdit?.orderId !== order.orderId && (
                             <span>{order.orderText}</span>
@@ -408,7 +408,7 @@ const Orders = () => {
                         <span className="flex py-1">
                           {titleEdit?.orderId === order.orderId && (
                             <span
-                              className=" h-9 mx-2 px-2 flex flex-row border outline-0 outline outline-0 hover:outline-2 cursor-pointer rounded-lg border-blue-500 dark:border-blue-400 px-1 text-blue-500 dark:text-blue-400 fill-blue-500 dark:fill-blue-400"
+                              className=" h-9 xs:mx-2 px-2 flex flex-row border outline-0 outline outline-0 hover:outline-2 cursor-pointer rounded-lg border-blue-500 dark:border-blue-400 px-1 text-blue-500 dark:text-blue-400 fill-blue-500 dark:fill-blue-400"
                               onClick={saveUpdateOrder}
                             >
                               <SaveIcon />

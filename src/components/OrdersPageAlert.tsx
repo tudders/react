@@ -1,7 +1,7 @@
 function OrdersPageAlert() {
   return (
     <div
-      className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 dark:bg-neutral-800 dark:border-neutral-700"
+      className="bg-white m-1 sm:m-0 border border-gray-200 rounded-lg shadow-lg p-4 dark:bg-neutral-800 dark:border-neutral-700"
       role="alert"
       tabIndex={-1}
       aria-labelledby="hs-discovery-label"

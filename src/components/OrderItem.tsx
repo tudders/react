@@ -70,7 +70,7 @@ const OrderItem: React.FC<OrderListProps> = ({
               ) : null}
             </div>
             {widgetEdit === widget.widgetId && (
-              <div className="flex">
+              <div className="xs:flex">
                 <div
                   onClick={() => {
                     updateWidgetItem(widget);

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   // configure the paths to all of your source files
@@ -9,6 +10,10 @@ module.exports = {
 
   theme: {
     extend: {
+      screens: {
+        xs: '450px',
+        ...defaultTheme.screens,
+      },
       animation: {
         // Bounces 5 times 1s equals 5 seconds
         'bounce-short': 'bounce 1s ease-in-out 5',
