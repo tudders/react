@@ -32,7 +32,7 @@ const Orders = () => {
     const response = await fetch(
       `${process.env.REACT_APP_API_DOMAIN}api/${fingerprint}/orders`,
       {
-        method: 'POST',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -237,7 +237,7 @@ const Orders = () => {
         const response = await fetch(
           `${process.env.REACT_APP_API_DOMAIN}api/${fingerprint}/orders/widget`,
           {
-            method: 'POST',
+            method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
             },
