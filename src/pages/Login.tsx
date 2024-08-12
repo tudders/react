@@ -220,7 +220,7 @@ const Login = () => {
         </div>
       )}
       {loggedIn && (
-        <div className="m-1">
+        <div className="m-3 xs:m-1">
           <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
             You're logged in!
           </h1>
@@ -228,7 +228,7 @@ const Login = () => {
         </div>
       )}
       {warning && (
-        <div className="mt-3 m-1 w-96 mx-auto">
+        <div className="mt-3 m-3 xs:mx-1 w-96 mx-auto">
           <div
             className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-5"
             role="alert"
