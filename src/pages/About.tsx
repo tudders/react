@@ -7,7 +7,7 @@ const skills = {
 
 const About = () => {
   return (
-    <div className="xs:mx-3">
+    <div className="mx-3">
       <h1 className="block text-5xl font-bold text-gray-800 dark:text-white">
         Sam Tudman
       </h1>
